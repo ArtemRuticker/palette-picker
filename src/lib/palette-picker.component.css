@@ -1,0 +1,24 @@
+.palette-picker {
+  display: flex;
+  flex-wrap: wrap; /* Позволяет переносить элементы на новую строку */
+  gap: 2px;
+  max-width: 100%; /* Делает так, чтобы контейнер не превышал максимальную ширину */
+}
+
+.palette-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.palette-square {
+  cursor: pointer;
+  transition: border 0.3s;
+}
+
+.palette-border {
+  position: absolute;
+  border: 2px solid black;
+  box-sizing: border-box;
+}
