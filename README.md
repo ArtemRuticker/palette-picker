@@ -55,11 +55,16 @@ export class AppComponent {
 Here's a complete example of using the `PalettePickerComponent`:
 
 ```typescript
-import { Component } from '@angular/core';
-import { PalettePickerComponent } from 'palette-picker-component';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { PalettePickerModule } from '../lib/palette-picker.module';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet, PalettePickerModule, CommonModule, FormsModule],
   template: `
     <div>
       <h1>Select a color:</h1>
@@ -73,11 +78,12 @@ import { PalettePickerComponent } from 'palette-picker-component';
       <p>Selected Color: {{ selectedColor }}</p>
     </div>
   `,
-  styles: []
+  styleUrls: ['./app.component.css'],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppComponent {
   colorPalette: string[] = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF'];
-  selectedColor: string = '';
+  selectedColor: string = '#00FF00';
 
   onColorChange(color: string): void {
     console.log('Selected color:', color);
