@@ -15,9 +15,12 @@ npm install palette-picker
 Import the component into your Angular module:
 
 ```typescript
-import { PalettePickerComponent } from 'palette-picker-component';
+import { PalettePickerComponent } from 'palette-picker';
+import { PalettePickerModule } from 'palette-picker';
+
 
 @NgModule({
+  imports: [ PalettePickerModule, CommonModule, FormsModule],
   declarations: [
     // other components
     PalettePickerComponent
@@ -56,7 +59,6 @@ Here's a complete example of using the `PalettePickerComponent`:
 
 ```typescript
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { PalettePickerModule } from 'palette-picker';
@@ -64,7 +66,7 @@ import { PalettePickerModule } from 'palette-picker';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, PalettePickerModule, CommonModule, FormsModule],
+  imports: [ PalettePickerModule, CommonModule, FormsModule],
   template: `
     <div>
       <h1>Select a color:</h1>
