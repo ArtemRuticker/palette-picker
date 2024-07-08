@@ -57,9 +57,9 @@ Here's a complete example of using the `PalettePickerComponent`:
 ```typescript
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { PalettePickerModule } from '../lib/palette-picker.module';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { PalettePickerModule } from 'palette-picker';
 
 @Component({
   selector: 'app-root',
