@@ -1,6 +1,6 @@
 <div class="palette-picker" [ngStyle]="{'max-width.px':  numColumns* (squareSize + 4) -2   }">
   <div *ngFor="let color of colors" class="palette-container">
-    <div *ngIf="selectedColor === color" class="palette-border" [ngStyle]="{'width.px': squareSize + 4, 'height.px': squareSize + 4}"></div>
+    <div *ngIf="selectedColor === color" class="palette-border" [ngStyle]="{'width.px': squareSize + 6, 'height.px': squareSize + 6}"></div>
     <div [ngStyle]="{'background-color': color, 'width.px': squareSize, 'height.px': squareSize}"
          class="palette-square"
          (click)="selectColor(color)">

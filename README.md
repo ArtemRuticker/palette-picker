@@ -52,6 +52,9 @@ export class AppComponent {
   }
 }
 ```
+## Live sample
+
+Link to live sample: https://stackblitz.com/edit/stackblitz-starters-6c24dt?file=src%2Fmain.ts
 
 ## Example
 
