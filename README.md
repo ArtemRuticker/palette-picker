@@ -19,7 +19,6 @@ import { FormsModule } from '@angular/forms';
 import { PalettePickerComponent } from 'palette-picker';
 import { PalettePickerModule } from 'palette-picker';
 
-
 @NgModule({
   imports: [ PalettePickerModule, FormsModule],
   declarations: [
@@ -47,7 +46,6 @@ In your component class, define the `colorPalette` and handle the `colorChange` 
 ```typescript
 export class AppComponent {
   colorPalette: string[] = ['#FF0000', '#00FF00', '#0000FF'];
-
   onColorChange(color: string): void {
     console.log('Selected color:', color);
   }
