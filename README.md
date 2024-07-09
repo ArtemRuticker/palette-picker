@@ -15,12 +15,13 @@ npm install palette-picker
 Import the component into your Angular module:
 
 ```typescript
+import { FormsModule } from '@angular/forms';
 import { PalettePickerComponent } from 'palette-picker';
 import { PalettePickerModule } from 'palette-picker';
 
 
 @NgModule({
-  imports: [ PalettePickerModule, CommonModule, FormsModule],
+  imports: [ PalettePickerModule, FormsModule],
   declarations: [
     // other components
     PalettePickerComponent
@@ -61,15 +62,14 @@ Link to live sample: https://stackblitz.com/edit/stackblitz-starters-6c24dt?file
 Here's a complete example of using the `PalettePickerComponent`:
 
 ```typescript
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { PalettePickerModule } from 'palette-picker';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ PalettePickerModule, CommonModule, FormsModule],
+  imports: [ PalettePickerModule, FormsModule],
   template: `
     <div>
       <h1>Select a color:</h1>
@@ -82,9 +82,7 @@ import { PalettePickerModule } from 'palette-picker';
       </palette-picker>
       <p>Selected Color: {{ selectedColor }}</p>
     </div>
-  `,
-  styleUrls: ['./app.component.css'],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  `
 })
 export class AppComponent {
   colorPalette: string[] = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF'];
